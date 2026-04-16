@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Tycoon: Origins - Select Theme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0a0b0d;
+            --accent-blue: #33a1ff;
+            --accent-purple: #8b5cf6;
+        }
+
+        body {
+            background: var(--bg-dark);
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        p.subtitle {
+            color: #8e929c;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        .theme-selection {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .theme-card {
+            width: 280px;
+            height: 380px;
+            border-radius: 35px;
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-card:hover {
+            transform: translateY(-20px) scale(1.02);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+        }
+
+        /* --- LIGHT MODE CARD --- */
+        .card-light {
+            background: #ffffff;
+            color: #1e293b;
+        }
+
+        .card-light:hover {
+            border-color: #33a1ff;
+            box-shadow: 0 40px 80px rgba(51, 161, 255, 0.2);
+        }
+
+        /* --- DARK MODE CARD --- */
+        .card-dark {
+            background: #141519;
+            color: #ffffff;
+        }
+
+        .card-dark:hover {
+            border-color: #8b5cf6;
+            box-shadow: 0 40px 80px rgba(139, 92, 246, 0.2);
+        }
+
+        .card-bg-visual {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.1;
+            font-size: 300px;
+            transition: transform 0.8s ease;
+        }
+
+        .theme-card:hover .card-bg-visual {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 5;
+            padding: 40px 30px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 34px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card-light .icon-circle {
+            background: #f1f5f9;
+            color: #33a1ff;
+        }
+
+        .card-dark .icon-circle {
+            background: #1e293b;
+            color: #ffd233;
+        }
+
+        .theme-card h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+            letter-spacing: -1px;
+        }
+
+        .theme-card p {
+            font-size: 13px;
+            line-height: 1.5;
+            opacity: 0.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-select {
+            padding: 12px 28px;
+            border-radius: 18px;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-light .btn-select {
+            background: #1e293b;
+            color: white;
+        }
+
+        .card-dark .btn-select {
+            background: #ffffff;
+            color: #000;
+        }
+
+        .theme-card:hover .btn-select {
+            transform: scale(1.05);
+        }
+
+        /* --- BACKGROUND PARTICLES --- */
+        .blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: linear-gradient(135deg, rgba(51, 161, 255, 0.2), rgba(139, 92, 246, 0.2));
+            filter: blur(80px);
+            border-radius: 50%;
+            z-index: 1;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-30%, -20%) scale(1); }
+            to { transform: translate(30%, 20%) scale(1.2); }
+        }
+    </style>
+</head>
+<body>
+    <div class="blob"></div>
+    
+    <div class="container">
+        <h1>Nexus Retail: Simulator</h1>
+        <p class="subtitle">Customize your simulator experience with our curated themes.</p>
+
+        <div class="theme-selection">
+            <a href="light/screens.htm" class="theme-card card-light">
+                <div class="card-bg-visual"><i class="fas fa-sun"></i></div>
+                <div class="card-content">
+                    <div class="icon-circle">☀️</div>
+                    <h2>Light Mode</h2>
+                    <p>A clean, focused interface with high readability. Perfect for daytime simulation analysis.</p>
+                    <div class="btn-select">Explore Light Mode <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </a>
+
+            <a href="dark/screens.htm" class="theme-card card-dark">
+                <div class="card-bg-visual"><i class="fas fa-moon"></i></div>
+                <div class="card-content">
+                    <div class="icon-circle">🌙</div>
+                    <h2>Dark Mode</h2>
+                    <p>Our premium, immersive experience with vibrant accents. The developer choice for deep immersion.</p>
+                    <div class="btn-select">Launch Master UI <i class="fas fa-arrow-right"></i></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
