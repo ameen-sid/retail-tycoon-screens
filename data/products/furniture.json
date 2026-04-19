@@ -1,0 +1,14 @@
+{
+  "furniture": [
+    { "id": "f_01", "name": "Checkout Counter", "buyPrice": 8000, "queueSpeedBoost": 10, "minLevel": 1, "icon": "🧾" },
+    { "id": "f_02", "name": "Basic Wooden Rack", "buyPrice": 2000, "capacityBoost": 30, "minLevel": 1, "icon": "🪵" },
+    { "id": "f_03", "name": "Basic Metal Rack", "buyPrice": 5000, "capacityBoost": 50, "minLevel": 9, "icon": "🗄️" },
+    { "id": "f_04", "name": "Basic Fridge", "buyPrice": 2500, "capacityBoost": 30, "minLevel": 15, "icon": "🧊" },
+    { "id": "f_05", "name": "Wooden Display Shelf", "buyPrice": 6000, "capacityBoost": 65, "minLevel": 20, "icon": "🗃️" },
+    { "id": "f_06", "name": "Display Fridge (Small)", "buyPrice": 15000, "capacityBoost": 80, "minLevel": 25, "icon": "🥶" },
+    { "id": "f_07", "name": "Gondola Rack (Double)", "buyPrice": 12000, "capacityBoost": 100, "minLevel": 32, "icon": "🏬" },
+    { "id": "f_08", "name": "Premium Glass Shelf", "buyPrice": 10000, "capacityBoost": 90, "minLevel": 40, "icon": "🪟" },
+    { "id": "f_09", "name": "Heavy Duty Rack", "buyPrice": 25000, "capacityBoost": 200, "minLevel": 49, "icon": "🏭" },
+    { "id": "f_10", "name": "Large Display Fridge", "buyPrice": 35000, "capacityBoost": 180, "minLevel": 60, "icon": "❄️" }
+  ]
+}

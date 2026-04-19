@@ -283,6 +283,7 @@
 			font-weight: 500;
 			margin-left: 5px;
 			display: block;
+			text-transform: uppercase;
 		}
 
 		/* --- BUTTONS --- */
@@ -371,6 +372,7 @@
 			justify-content: center;
 			align-items: center;
 			cursor: pointer;
+			flex-shrink: 0;
 		}
 
 		/* --- DASHBOARD ELEMENTS --- */
@@ -794,13 +796,136 @@
 			border-color: var(--accent-yellow);
 			background: rgba(255, 210, 51, 0.05);
 		}
+
+		/* --- NAVIGATION --- */
+		.header-nav {
+			margin-bottom: 20px;
+			padding-left: 10px;
+		}
+
+		.btn-back {
+			text-decoration: none;
+			color: var(--text-muted);
+			font-weight: 600;
+			font-size: 14px;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			transition: 0.3s;
+		}
+
+		.btn-back:hover {
+			color: var(--accent-blue);
+		}
+
+		/* --- LIVE SIMULATION SPECIFIC ANIMATIONS & UI --- */
+		.live-indicator {
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-color: #F87171;
+			border-radius: 50%;
+			margin-left: 10px;
+			animation: blink 1.5s infinite;
+			box-shadow: 0 0 10px #F87171;
+		}
+
+		@keyframes blink {
+
+			0%,
+			100% {
+				opacity: 1;
+			}
+
+			50% {
+				opacity: 0.3;
+			}
+		}
+
+		.feed-container {
+			background: #131418;
+			border-radius: 20px;
+			padding: 15px;
+			flex-grow: 1;
+			min-height: 200px;
+			overflow-y: hidden;
+			border: 1px solid rgba(255, 255, 255, 0.02);
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
+		.feed-item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			padding: 8px 0;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+			font-family: monospace;
+			font-size: 12px;
+			color: #A0A5B1;
+			animation: slideUp 0.3s ease-out;
+		}
+
+		.feed-item:last-child {
+			border-bottom: none;
+		}
+
+		.feed-icon {
+			font-size: 14px;
+		}
+
+		.feed-profit {
+			color: #4ADE80;
+			font-weight: bold;
+			margin-left: auto;
+		}
+
+		.feed-loss {
+			color: #F87171;
+			margin-left: auto;
+		}
+
+		@keyframes slideUp {
+			from {
+				transform: translateY(10px);
+				opacity: 0;
+			}
+
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		.queue-avatar {
+			font-size: 24px;
+			animation: bounce 2s infinite;
+			display: inline-block;
+			margin-right: -5px;
+		}
+
+		@keyframes bounce {
+
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-5px);
+			}
+		}
 	</style>
 </head>
 
 <body>
+	<div class="header-nav">
+		<a href="screens.htm" class="btn-back"><i class="fas fa-arrow-left"></i> Back to Main Menu</a>
+	</div>
 	<div class="category-section">
 		<h2 class="category-title" style="border-left-color: var(--accent-yellow)">
-			Shop Owner Operations
+			Dashboard & Terminal
 		</h2>
 		<div class="screens-row">
 			<div>
@@ -1369,7 +1494,14 @@
 				</div>
 				<div class="screen-label">Terminal OS</div>
 			</div>
+		</div>
+	</div>
 
+	<div class="category-section">
+		<h2 class="category-title" style="border-left-color: var(--accent-blue)">
+			Wholesale Market
+		</h2>
+		<div class="screens-row">
 			<div>
 				<div class="iphone-frame">
 					<div class="notch"></div>
@@ -2563,7 +2695,14 @@
 				</div>
 				<div class="screen-label">InfraBuild Success</div>
 			</div>
+		</div>
+	</div>
 
+	<div class="category-section">
+		<h2 class="category-title" style="border-left-color: #4ade80">
+			Staff & HR
+		</h2>
+		<div class="screens-row">
 			<div>
 				<div class="iphone-frame">
 					<div class="notch"></div>
@@ -2769,7 +2908,14 @@
 				</div>
 				<div class="screen-label">Staff Management</div>
 			</div>
+		</div>
+	</div>
 
+	<div class="category-section">
+		<h2 class="category-title" style="border-left-color: var(--accent-purple)">
+			Inventory & Logistics
+		</h2>
+		<div class="screens-row">
 			<div>
 				<div class="iphone-frame">
 					<div class="notch"></div>
@@ -3274,6 +3420,186 @@
 					</div>
 				</div>
 				<div class="screen-label">Manage Racks</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="category-section">
+		<h2 class="category-title" style="border-left-color: #F87171">
+			Live Shop Simulation
+		</h2>
+		<div class="screens-row">
+			<div>
+				<div class="iphone-frame">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div
+							style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; flex-shrink: 0; margin-bottom: 20px;">
+							<div>
+								<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Live Shop <span
+										class="live-indicator"></span></h2>
+								<p style="color: var(--text-muted); font-size: 12px; margin: 0;">Retail Tycoon
+									Simulation Active</p>
+							</div>
+							<button class="btn-icon" style="background: rgba(248, 113, 113, 0.1); color: #F87171;"><i
+									class="fas fa-stop"></i></button>
+						</div>
+
+						<div class="grid-2" style="margin-top: 0; margin-bottom: 15px;">
+							<div class="stat-box" style="border-color: rgba(51, 161, 255, 0.2);">
+								<h4>Live Footfall</h4>
+								<p style="color: var(--accent-blue); display: flex; align-items: center; gap: 8px;"><i
+										class="fas fa-users"></i> 12</p>
+							</div>
+							<div class="stat-box" style="border-color: rgba(74, 222, 128, 0.2);">
+								<h4>Session Revenue</h4>
+								<p style="color: #4ADE80;">₹ 1,450</p>
+							</div>
+						</div>
+
+						<label class="input-label" style="margin-bottom: 10px; color: white;">LIVE ACTIVITY FEED</label>
+						<div class="feed-container">
+							<div class="feed-item"><span class="feed-icon">🟢</span> <span>Customer #102 bought 2x
+									Milk</span> <span class="feed-profit">+₹90</span></div>
+							<div class="feed-item"><span class="feed-icon">🟢</span> <span>Customer #103 bought 1x
+									Bread</span> <span class="feed-profit">+₹30</span></div>
+							<div class="feed-item" style="color: #F87171;"><span class="feed-icon">🔴</span>
+								<span>Customer #104 angry</span> <span class="feed-loss">Rack Empty</span>
+							</div>
+							<div class="feed-item"><span class="feed-icon">🟢</span> <span>Customer #105 bought 1x
+									Laptop</span> <span class="feed-profit">+₹45,000</span></div>
+							<div class="feed-item" style="color: var(--accent-yellow);"><span
+									class="feed-icon">⚠️</span> <span>Queue is getting long...</span></div>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Live Shop Monitor</div>
+			</div>
+
+			<div>
+				<div class="iphone-frame">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div
+							style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Billing Counter</h2>
+						</div>
+
+						<div class="soft-card"
+							style="flex-direction: column; align-items: stretch; gap: 15px; border-color: rgba(255, 210, 51, 0.2); background: #1A1C21;">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<h4 style="margin: 0; color: white; font-size: 14px;">Checkout Line</h4>
+								<span style="color: var(--accent-yellow); font-weight: bold; font-size: 12px;">3 / 5
+									Capacity</span>
+							</div>
+
+							<div
+								style="display: flex; align-items: center; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05);">
+								<div style="display: flex; gap: 5px;">
+									<span class="queue-avatar" style="animation-delay: 0s;">🧍♂️</span>
+									<span class="queue-avatar" style="animation-delay: 0.2s;">🚶♀️</span>
+									<span class="queue-avatar" style="animation-delay: 0.4s;">🧍</span>
+								</div>
+								<div
+									style="font-size: 35px; border-left: 2px dashed var(--accent-yellow); padding-left: 15px;">
+									🧾</div>
+							</div>
+
+							<div
+								style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted);">
+								<span>Avg Wait Time: <span style="color: white;">1.2 mins</span></span>
+								<span>Cashier Speed: <span style="color: white;">Normal</span></span>
+							</div>
+						</div>
+
+						<label class="input-label" style="margin-bottom: 10px; margin-top: 15px;">UPGRADES</label>
+
+						<div class="product-item">
+							<div class="product-icon" style="color: #4ADE80;">⚡</div>
+							<div class="product-details">
+								<h4 class="product-name">Fast Scanner</h4>
+								<p style="color: var(--text-muted); font-size: 11px; margin: 0;">Reduce wait time by 30%
+								</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 8px 12px; margin: 0;">₹
+								5,000</button>
+						</div>
+
+						<div class="product-item">
+							<div class="product-icon" style="color: var(--accent-blue);">👨💼</div>
+							<div class="product-details">
+								<h4 class="product-name">Hire Cashier</h4>
+								<p style="color: var(--text-muted); font-size: 11px; margin: 0;">Open a new billing line
+								</p>
+							</div>
+							<button class="btn-small"
+								style="width: auto; padding: 8px 12px; margin: 0; color: var(--accent-blue); border-color: var(--accent-blue);">₹
+								15k/mo</button>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Billing Counter</div>
+			</div>
+
+			<div>
+				<div class="iphone-frame">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div
+							style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Customer Insights
+							</h2>
+						</div>
+
+						<div style="text-align: center; margin-bottom: 30px;">
+							<p style="color: var(--text-muted); font-size: 13px; margin: 0;">Store Reputation</p>
+							<h1 style="color: white; font-size: 48px; margin: 5px 0 0 0;">4.2</h1>
+							<div style="color: var(--accent-yellow); font-size: 20px; margin-top: 5px;">
+								<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+									class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+							</div>
+						</div>
+
+						<div class="grid-2" style="margin-top: 0; margin-bottom: 25px;">
+							<div class="stat-box">
+								<h4>Happy Customers</h4>
+								<p style="color: #4ADE80;">85%</p>
+							</div>
+							<div class="stat-box" style="border-color: rgba(248, 113, 113, 0.2);">
+								<h4>Walkouts</h4>
+								<p style="color: #F87171;">15%</p>
+							</div>
+						</div>
+
+						<label class="input-label" style="margin-bottom: 10px; color: var(--accent-purple);">TRENDING /
+							MISSED DEMANDS</label>
+						<p style="font-size: 11px; color: var(--text-muted); margin-top: 0; margin-bottom: 15px;">Items
+							customers wanted but racks were empty.</p>
+
+						<div class="soft-card"
+							style="padding: 15px; margin-bottom: 10px; border-color: rgba(248, 113, 113, 0.2);">
+							<div style="font-size: 24px; margin-right: 15px;">💻</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 14px;">Office Laptop</h4>
+								<p style="margin: 2px 0 0; color: #F87171; font-size: 11px;">12 Missed Sales Today</p>
+							</div>
+							<i class="fas fa-arrow-trend-up" style="color: #F87171;"></i>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; margin-bottom: 10px;">
+							<div style="font-size: 24px; margin-right: 15px;">🍞</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 14px;">Wheat Bread</h4>
+								<p style="margin: 2px 0 0; color: var(--text-muted); font-size: 11px;">3 Missed Sales
+									Today</p>
+							</div>
+							<i class="fas fa-arrow-trend-up" style="color: var(--text-muted);"></i>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Customer Insights</div>
 			</div>
 		</div>
 	</div>

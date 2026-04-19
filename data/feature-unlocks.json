@@ -1,0 +1,53 @@
+{
+  "featureUnlocks": [
+	 	{
+	    "featureId": "feat_furniture",
+	    "name": "InfraBuild Supply Chain",
+	    "minLevel": 1,
+	    "description": "Unlock premium store fixtures, racks, and heavy display units.",
+	    "icon": "🪑"
+	  },
+    {
+      "featureId": "feat_groceries",
+      "name": "FreshCo Supply Chain",
+      "minLevel": 1,
+      "description": "Unlock access to basic groceries and dairy products.",
+      "icon": "🛒"
+    },
+    {
+      "featureId": "feat_electronics",
+      "name": "TechDist Supply Chain",
+      "minLevel": 1,
+      "description": "Unlock access to high-margin electronic goods.",
+      "icon": "💻"
+    },
+    {
+      "featureId": "feat_backroom",
+      "name": "Backroom Storage",
+      "minLevel": 7,
+      "description": "Unlock the backroom to store extra inventory securely.",
+      "icon": "📦"
+    },
+    {
+      "featureId": "feat_coldroom",
+      "name": "Walk-in Cold Room",
+      "minLevel": 10,
+      "description": "Unlock advanced cold storage in the backroom to safely store frozen and perishable goods.",
+      "icon": "❄️"
+    },
+    {
+      "featureId": "feat_staff_cashier",
+      "name": "Hire Staff: Cashier",
+      "minLevel": 30,
+      "description": "Open a second checkout line to process customers faster and reduce walkouts.",
+      "icon": "👨‍💼"
+    },  
+    {
+      "featureId": "feat_staff_restocker",
+      "name": "Hire Staff: Stock Boy",
+      "minLevel": 50,
+      "description": "Automate your shop floor! Staff will automatically refill empty display racks from the backroom.",
+      "icon": "🏃‍♂️"
+    }
+  ]
+}
