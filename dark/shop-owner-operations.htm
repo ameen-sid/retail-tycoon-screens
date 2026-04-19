@@ -992,9 +992,7 @@
 											color: white;
 											cursor: pointer;
 											transition: 0.2s;
-										" onclick="
-											alert('Opening Owner Profile...')
-										" onmouseover="
+										" onclick="showScreen('screen-profile')" onmouseover="
 											this.style.background =
 												'var(--accent-yellow)';
 											this.style.color = 'black';
@@ -1014,9 +1012,7 @@
 									">SHOP MANAGEMENT</label>
 
 							<div class="grid-2" style="margin-top: 0; gap: 10px">
-								<div class="owner-nav-card" style="padding: 10px" onclick="
-											alert('Opening Laptop/Terminal...')
-										">
+								<div class="owner-nav-card" style="padding: 10px" onclick="showScreen('screen-freshco-catalog')">
 									<div style="
 												font-size: 28px;
 												filter: drop-shadow(
@@ -1042,9 +1038,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="owner-nav-card" style="padding: 10px" onclick="
-											alert('Going to Dock Area...')
-										">
+								<div class="owner-nav-card" style="padding: 10px" onclick="showScreen('screen-dock-area')">
 									<div style="
 												font-size: 28px;
 												filter: drop-shadow(
@@ -1070,8 +1064,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="owner-nav-card" style="padding: 10px"
-									onclick="alert('Going to Backroom...')">
+								<div class="owner-nav-card" style="padding: 10px" onclick="showScreen('screen-backroom')">
 									<div style="
 												font-size: 28px;
 												filter: drop-shadow(
@@ -1097,9 +1090,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="owner-nav-card" style="padding: 10px" onclick="
-											alert('Going to Shop Floor...')
-										">
+								<div class="owner-nav-card" style="padding: 10px" onclick="showScreen('screen-manage-racks')">
 									<div style="
 												font-size: 28px;
 												filter: drop-shadow(
@@ -1125,9 +1116,7 @@
 										</p>
 									</div>
 								</div>
-								<div class="owner-nav-card" style="padding: 10px" onclick="
-											alert('Going to Team Management...')
-										">
+								<div class="owner-nav-card" style="padding: 10px" onclick="showScreen('screen-staff')">
 									<div style="
 												font-size: 28px;
 												filter: drop-shadow(
@@ -1179,24 +1168,15 @@
 								</div>
 							</div>
 
-							<label class="input-label" style="margin-bottom: 10px">SALES REVENUE (₹)</label>
-							<div class="stats-grid">
-								<div class="stat-box">
-									<h4>Today</h4>
-									<p style="color: #4ade80">5,200</p>
+							</div>
+
+							<div class="soft-card" style="margin-top: 25px; border-color: rgba(255, 210, 51, 0.3);" onclick="showScreen('screen-achievements')">
+								<div class="icon-box" style="background: rgba(255, 210, 51, 0.1); color: var(--accent-yellow);">🏆</div>
+								<div style="flex-grow: 1;">
+									<h4 style="margin: 0; color: white; font-size: 14px;">Achievements</h4>
+									<p style="margin: 0; color: var(--text-muted); font-size: 11px;">View milestones & rewards</p>
 								</div>
-								<div class="stat-box">
-									<h4>This Week</h4>
-									<p>35,400</p>
-								</div>
-								<div class="stat-box">
-									<h4>This Month</h4>
-									<p>1,20,000</p>
-								</div>
-								<div class="stat-box">
-									<h4>Total All Time</h4>
-									<p>4,50,000</p>
-								</div>
+								<i class="fas fa-chevron-right" style="color: var(--text-muted);"></i>
 							</div>
 						</div>
 					</div>
@@ -1204,18 +1184,17 @@
 				<div class="screen-label">Owner Dashboard</div>
 			</div>
 
-			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-profile">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div style="
 									display: flex;
 									align-items: center;
 									gap: 15px;
-									margin: 10px 0 25px 0;
+									margin: 10px 0 15px 0;
 									flex-shrink: 0;
 								">
-							<i class="fas fa-arrow-left" style="color: white; cursor: pointer"></i>
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-dashboard')"></i>
 							<h2 style="
 										color: white;
 										font-size: 20px;
@@ -1226,23 +1205,34 @@
 							</h2>
 						</div>
 
+						<!-- XP Progress Bar -->
+						<div class="soft-card" style="flex-direction: column; align-items: stretch; gap: 10px; margin-bottom: 25px; padding: 15px; background: rgba(51, 161, 255, 0.05); border-color: rgba(51, 161, 255, 0.2);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<span style="color: white; font-size: 13px; font-weight: 600;">Level 1 Owner</span>
+								<span style="color: var(--accent-blue); font-size: 11px;">1,250 / 5,000 XP</span>
+							</div>
+							<div class="stock-bar-bg" style="height: 8px; background: rgba(0,0,0,0.3);">
+								<div class="stock-bar-fill" style="width: 25%; background: var(--accent-blue); box-shadow: 0 0 10px rgba(51, 161, 255, 0.3);"></div>
+							</div>
+						</div>
+
 						<div style="
 									display: flex;
 									flex-direction: column;
 									align-items: center;
-									margin-bottom: 30px;
+									margin-bottom: 25px;
 									flex-shrink: 0;
 								">
 							<div style="position: relative">
 								<div style="
-											width: 100px;
-											height: 100px;
+											width: 90px;
+											height: 90px;
 											border-radius: 50%;
 											background: var(--owner-gradient);
 											display: flex;
 											justify-content: center;
 											align-items: center;
-											font-size: 40px;
+											font-size: 35px;
 											color: white;
 											box-shadow: 0 10px 20px
 												rgba(255, 210, 51, 0.3);
@@ -1253,15 +1243,15 @@
 											position: absolute;
 											bottom: 0;
 											right: 0;
-											width: 30px;
-											height: 30px;
+											width: 28px;
+											height: 28px;
 											background: white;
 											border-radius: 50%;
 											display: flex;
 											justify-content: center;
 											align-items: center;
 											color: black;
-											font-size: 12px;
+											font-size: 11px;
 											cursor: pointer;
 											border: 3px solid var(--bg-deep);
 										">
@@ -1270,19 +1260,13 @@
 							</div>
 							<h2 style="
 										color: white;
-										font-size: 22px;
+										font-size: 20px;
 										font-weight: 700;
-										margin: 15px 0 5px 0;
+										margin: 12px 0 4px 0;
 									">
 								Mohd Ameen
 							</h2>
-							<p style="
-										color: var(--text-muted);
-										font-size: 13px;
-										margin: 0;
-									">
-								Nexus Retail (Owner)
-							</p>
+							<div style="background: rgba(255, 210, 51, 0.2); color: var(--accent-yellow); padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: bold; text-transform: uppercase;">Nexus Retail Owner</div>
 						</div>
 
 						<div class="input-group">
@@ -1304,18 +1288,68 @@
 									border-color: rgba(248, 113, 113, 0.2);
 									justify-content: center;
 									cursor: pointer;
-									padding: 15px;
+									padding: 12px;
 								">
-							<span style="color: #f87171; font-weight: 600"><i class="fas fa-sign-out-alt"></i> Close
+							<span style="color: #f87171; font-weight: 600; font-size: 13px;"><i class="fas fa-sign-out-alt"></i> Close
 								Supermarket</span>
 						</div>
 
-						<button class="btn-pill btn-yellow" style="margin-top: auto; flex-shrink: 0">
+						<button class="btn-pill btn-yellow" style="margin-top: auto; flex-shrink: 0" onclick="showScreen('screen-dashboard')">
 							Save Changes
 						</button>
 					</div>
 				</div>
 				<div class="screen-label">Owner Profile</div>
+			</div>
+
+			<!-- Screen 7: Achievements -->
+			<div>
+				<div class="iphone-frame" id="screen-achievements">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-dashboard')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Achievements</h2>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; border-color: rgba(74, 222, 128, 0.3);">
+							<div class="icon-box" style="background: rgba(74, 222, 128, 0.1); color: #4ade80; width: 45px; height: 45px; font-size: 22px;">🌱</div>
+							<div style="flex-grow: 1;">
+								<div style="display: flex; justify-content: space-between;">
+									<h4 style="margin: 0; color: white; font-size: 13px;">First Steps</h4>
+									<span style="color: #4ade80; font-size: 10px; font-weight: bold;">CLAIMED</span>
+								</div>
+								<p style="margin: 3px 0 0; color: var(--text-muted); font-size: 10px;">Open your first supermarket.</p>
+							</div>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; border-color: rgba(51, 161, 255, 0.3);">
+							<div class="icon-box" style="background: rgba(51, 161, 255, 0.1); color: var(--accent-blue); width: 45px; height: 45px; font-size: 22px;">📦</div>
+							<div style="flex-grow: 1;">
+								<div style="display: flex; justify-content: space-between;">
+									<h4 style="margin: 0; color: white; font-size: 13px;">Supply Chain</h4>
+									<span style="color: var(--accent-blue); font-size: 10px; font-weight: bold;">80%</span>
+								</div>
+								<p style="margin: 3px 0 0; color: var(--text-muted); font-size: 10px;">Order 1,000 units of stock.</p>
+								<div class="stock-bar-bg" style="height: 4px; margin-top: 8px;">
+									<div class="stock-bar-fill" style="width: 80%; background: var(--accent-blue);"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; opacity: 0.6;">
+							<div class="icon-box" style="width: 45px; height: 45px; font-size: 22px;">💰</div>
+							<div style="flex-grow: 1;">
+								<div style="display: flex; justify-content: space-between;">
+									<h4 style="margin: 0; color: white; font-size: 13px;">Milionare</h4>
+									<span style="color: var(--text-muted); font-size: 10px; font-weight: bold;">LOCKED</span>
+								</div>
+								<p style="margin: 3px 0 0; color: var(--text-muted); font-size: 10px;">Reach ₹ 1,000,000 in sales.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Achievements</div>
 			</div>
 
 			<div>
@@ -1561,87 +1595,63 @@
 										border-color: rgba(51, 161, 255, 0.2);
 									" />
 						</div>
-						<div class="grid-2">
-							<div class="market-card" style="
-										border-color: rgba(51, 161, 255, 0.2);
-									">
-								<div class="market-icon">🥛</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Premium Milk
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 50 units
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 45
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-blue);
-											border-color: var(--accent-blue);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
-							<div class="market-card" style="
-										border-color: rgba(51, 161, 255, 0.2);
-									">
-								<div class="market-icon">🍞</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Wheat Bread
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 50 units
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 30
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-blue);
-											border-color: var(--accent-blue);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
+						<div class="grid-2" id="freshco-grid">
+							<!-- Dynamic contents -->
 						</div>
-						<button class="btn-pill btn-blue" style="margin-top: auto; flex-shrink: 0">
-							<i class="fas fa-shopping-bag"></i> View Cart (2
-							Items)
+						<button class="btn-pill btn-blue" style="margin-top: auto; flex-shrink: 0" onclick="showScreen('screen-freshco-cart')">
+							<i class="fas fa-shopping-bag"></i> View Cart
 						</button>
 					</div>
 				</div>
-				<div class="screen-label">FreshCo Store</div>
+				<div class="screen-label">FreshCo Catalog</div>
+			</div>
+
+			<!-- Screen 10: FreshCo Product Details -->
+			<div>
+				<div class="iphone-frame" id="screen-freshco-details">
+					<div class="notch"></div>
+					<div class="screen-content" style="background: linear-gradient(180deg, #1e293b 0%, var(--bg-deep) 100%);">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-freshco-catalog')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Product Details</h2>
+						</div>
+						<div style="text-align: center; margin-bottom: 30px;">
+							<div class="market-icon" style="width: 100px; height: 100px; font-size: 60px; margin-bottom: 15px; margin-left: auto; margin-right: auto;" id="freshco-p-icon">🥛</div>
+							<h1 class="heading-xl" style="font-size: 24px;" id="freshco-p-name">Premium Milk</h1>
+							<p class="sub-text" id="freshco-p-category">FreshCo Supply Chain</p>
+						</div>
+						<div class="soft-card" style="flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px;">
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Wholesale Price</span>
+								<span style="color: white; font-weight: 600;" id="freshco-p-buy">₹ 45 / unit</span>
+							</div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Market Retail Price</span>
+								<span style="color: #4ade80; font-weight: 600;" id="freshco-p-sell">₹ 60 / unit</span>
+							</div>
+							<div style="width: 100%; height: 1px; background: rgba(255,255,255,0.05); margin: 5px 0;"></div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Estimated Margin</span>
+								<span style="color: var(--accent-yellow); font-weight: 700;" id="freshco-p-margin">₹ 15 (25%)</span>
+							</div>
+						</div>
+						<div class="soft-card" style="margin-top: 10px; border-color: rgba(51, 161, 255, 0.2);">
+							<div class="icon-box" style="background: rgba(51, 161, 255, 0.1); color: var(--accent-blue);">📦</div>
+							<div>
+								<h4 style="margin: 0; font-size: 14px;">Logistics Detail</h4>
+								<p style="margin: 0; font-size: 12px; color: var(--text-muted);" id="freshco-p-moq">Minimum Order Quantity: 50 units</p>
+							</div>
+						</div>
+						<div style="margin-top: 20px;">
+							<label class="input-label" style="color: var(--accent-blue)">SUPPLIER NOTE</label>
+							<p class="sub-text" style="font-size: 12px; margin-top: 8px; line-height: 1.6;" id="freshco-p-desc">High-quality dairy product with a quick shelf turnaround. Essential for any retail startup.</p>
+						</div>
+						<button class="btn-pill btn-blue" style="margin-top: auto;" id="freshco-add-btn">
+							<i class="fas fa-shopping-cart"></i> Add to Cart (MOQ)
+						</button>
+					</div>
+				</div>
+				<div class="screen-label">FreshCo Details</div>
 			</div>
 
 			<div>
@@ -1905,7 +1915,7 @@
 			</div>
 
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-techdist-catalog">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div style="
@@ -1963,87 +1973,63 @@
 										border-color: rgba(139, 92, 246, 0.2);
 									" />
 						</div>
-						<div class="grid-2">
-							<div class="market-card" style="
-										border-color: rgba(139, 92, 246, 0.3);
-									">
-								<div class="market-icon">💻</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Office Laptop
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 2 units
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 45k
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-purple);
-											border-color: var(--accent-purple);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
-							<div class="market-card" style="
-										border-color: rgba(139, 92, 246, 0.3);
-									">
-								<div class="market-icon">🖱️</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Wireless Mouse
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 10 units
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 1.2k
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-purple);
-											border-color: var(--accent-purple);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
+						<div class="grid-2" id="techdist-grid">
+							<!-- Dynamic contents -->
 						</div>
-						<button class="btn-pill btn-purple" style="margin-top: auto; flex-shrink: 0">
-							<i class="fas fa-shopping-bag"></i> View Cart (2
-							Items)
+						<button class="btn-pill btn-purple" style="margin-top: auto; flex-shrink: 0" onclick="showScreen('screen-techdist-cart')">
+							<i class="fas fa-shopping-bag"></i> View Cart
 						</button>
 					</div>
 				</div>
-				<div class="screen-label">TechDist Store</div>
+				<div class="screen-label">TechDist Catalog</div>
+			</div>
+
+			<!-- Screen 10: TechDist Product Details -->
+			<div>
+				<div class="iphone-frame" id="screen-techdist-details">
+					<div class="notch"></div>
+					<div class="screen-content" style="background: linear-gradient(180deg, #1e293b 0%, var(--bg-deep) 100%);">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-techdist-catalog')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Product Details</h2>
+						</div>
+						<div style="text-align: center; margin-bottom: 30px;">
+							<div class="market-icon" style="width: 100px; height: 100px; font-size: 60px; margin-bottom: 15px; margin-left: auto; margin-right: auto;" id="techdist-p-icon">💻</div>
+							<h1 class="heading-xl" style="font-size: 24px;" id="techdist-p-name">Office Laptop</h1>
+							<p class="sub-text" id="techdist-p-category">TechDist Supply Chain</p>
+						</div>
+						<div class="soft-card" style="flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px;">
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Wholesale Price</span>
+								<span style="color: white; font-weight: 600;" id="techdist-p-buy">₹ 45k / unit</span>
+							</div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Market Retail Price</span>
+								<span style="color: #4ade80; font-weight: 600;" id="techdist-p-sell">₹ 60k / unit</span>
+							</div>
+							<div style="width: 100%; height: 1px; background: rgba(255,255,255,0.05); margin: 5px 0;"></div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Estimated Margin</span>
+								<span style="color: var(--accent-yellow); font-weight: 700;" id="techdist-p-margin">₹ 15k (25%)</span>
+							</div>
+						</div>
+						<div class="soft-card" style="margin-top: 10px; border-color: rgba(139, 92, 246, 0.2);">
+							<div class="icon-box" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple);">📦</div>
+							<div>
+								<h4 style="margin: 0; font-size: 14px;">Logistics Detail</h4>
+								<p style="margin: 0; font-size: 12px; color: var(--text-muted);" id="techdist-p-moq">Minimum Order Quantity: 2 units</p>
+							</div>
+						</div>
+						<div style="margin-top: 20px;">
+							<label class="input-label" style="color: var(--accent-purple)">SUPPLIER NOTE</label>
+							<p class="sub-text" style="font-size: 12px; margin-top: 8px; line-height: 1.6;" id="techdist-p-desc">High-demand electronics with premium margins. Ensure you have the level requirement for higher-tier devices.</p>
+						</div>
+						<button class="btn-pill btn-purple" style="margin-top: auto;" id="techdist-add-btn">
+							<i class="fas fa-shopping-cart"></i> Add to Cart (MOQ)
+						</button>
+					</div>
+				</div>
+				<div class="screen-label">TechDist Details</div>
 			</div>
 
 			<div>
@@ -2301,7 +2287,7 @@
 			</div>
 
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-infrabuild-catalog">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div style="
@@ -2359,87 +2345,63 @@
 										border-color: rgba(255, 210, 51, 0.2);
 									" />
 						</div>
-						<div class="grid-2">
-							<div class="market-card" style="
-										border-color: rgba(255, 210, 51, 0.2);
-									">
-								<div class="market-icon">🗄️</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Metal Rack
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 1 unit
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 5k
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-yellow);
-											border-color: var(--accent-yellow);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
-							<div class="market-card" style="
-										border-color: rgba(255, 210, 51, 0.2);
-									">
-								<div class="market-icon">🛒</div>
-								<h4 style="
-											margin: 0;
-											color: white;
-											font-size: 13px;
-										">
-									Shopping Cart
-								</h4>
-								<p style="
-											margin: 3px 0 0;
-											color: var(--text-muted);
-											font-size: 11px;
-										">
-									MOQ: 10 units
-								</p>
-								<h3 style="
-											margin: 5px 0 0;
-											color: white;
-											font-size: 14px;
-										">
-									₹ 3k
-									<span style="
-												font-size: 10px;
-												color: var(--text-muted);
-											">/unit</span>
-								</h3>
-								<button class="btn-small" style="
-											color: var(--accent-yellow);
-											border-color: var(--accent-yellow);
-										">
-									<i class="fas fa-shopping-cart"></i> Add
-								</button>
-							</div>
+						<div class="grid-2" id="infrabuild-grid">
+							<!-- Dynamic content injected by script -->
 						</div>
-						<button class="btn-pill btn-yellow" style="margin-top: auto; flex-shrink: 0">
-							<i class="fas fa-shopping-bag"></i> View Cart (1
-							Item)
+						<button class="btn-pill btn-yellow" style="margin-top: auto; flex-shrink: 0" onclick="showScreen('screen-infrabuild-cart')">
+							<i class="fas fa-shopping-bag"></i> View Cart
 						</button>
 					</div>
 				</div>
-				<div class="screen-label">InfraBuild Store</div>
+				<div class="screen-label">InfraBuild Catalog</div>
+			</div>
+
+			<!-- Screen 10: InfraBuild Product Details -->
+			<div>
+				<div class="iphone-frame" id="screen-infrabuild-details">
+					<div class="notch"></div>
+					<div class="screen-content" style="background: linear-gradient(180deg, #1e293b 0%, var(--bg-deep) 100%);">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-infrabuild-catalog')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Product Details</h2>
+						</div>
+						<div style="text-align: center; margin-bottom: 30px;">
+							<div class="market-icon" style="width: 100px; height: 100px; font-size: 60px; margin-bottom: 15px; margin-left: auto; margin-right: auto;" id="infrabuild-p-icon">🗄️</div>
+							<h1 class="heading-xl" style="font-size: 24px;" id="infrabuild-p-name">Metal Rack</h1>
+							<p class="sub-text" id="infrabuild-p-category">InfraBuild Supply Chain</p>
+						</div>
+						<div class="soft-card" style="flex-direction: column; align-items: flex-start; gap: 12px; padding: 20px;">
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Wholesale Price</span>
+								<span style="color: white; font-weight: 600;" id="infrabuild-p-buy">₹ 5k / unit</span>
+							</div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Market Retail Price</span>
+								<span style="color: #4ade80; font-weight: 600;" id="infrabuild-p-sell">₹ 7k / unit</span>
+							</div>
+							<div style="width: 100%; height: 1px; background: rgba(255,255,255,0.05); margin: 5px 0;"></div>
+							<div style="display: flex; justify-content: space-between; width: 100%;">
+								<span style="color: var(--text-muted); font-size: 13px;">Estimated Margin</span>
+								<span style="color: var(--accent-yellow); font-weight: 700;" id="infrabuild-p-margin">₹ 2k (40%)</span>
+							</div>
+						</div>
+						<div class="soft-card" style="margin-top: 10px; border-color: rgba(255, 210, 51, 0.2);">
+							<div class="icon-box" style="background: rgba(255, 210, 51, 0.1); color: var(--accent-yellow);">📦</div>
+							<div>
+								<h4 style="margin: 0; font-size: 14px;">Logistics Detail</h4>
+								<p style="margin: 0; font-size: 12px; color: var(--text-muted);" id="infrabuild-p-moq">Minimum Order Quantity: 1 unit</p>
+							</div>
+						</div>
+						<div style="margin-top: 20px;">
+							<label class="input-label" style="color: var(--accent-yellow)">SUPPLIER NOTE</label>
+							<p class="sub-text" style="font-size: 12px; margin-top: 8px; line-height: 1.6;" id="infrabuild-p-desc">Essential store fixtures. Durable and necessary for displaying high-margin items to customers.</p>
+						</div>
+						<button class="btn-pill btn-yellow" style="margin-top: auto;" id="infrabuild-add-btn">
+							<i class="fas fa-shopping-cart"></i> Add to Cart (MOQ)
+						</button>
+					</div>
+				</div>
+				<div class="screen-label">InfraBuild Details</div>
 			</div>
 
 			<div>
@@ -2917,7 +2879,7 @@
 		</h2>
 		<div class="screens-row">
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-dock-area">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div style="margin: 10px 0 30px 0; flex-shrink: 0">
@@ -2961,7 +2923,7 @@
 									">
 								50x Premium Milk, 20x Wheat Bread
 							</p>
-							<button class="btn-pill btn-yellow" style="padding: 10px; font-size: 13px">
+							<button class="btn-pill btn-yellow" style="padding: 10px; font-size: 13px" onclick="showScreen('screen-backroom')">
 								<i class="fas fa-dolly"></i> Transfer to Backroom
 							</button>
 						</div>
@@ -2987,7 +2949,7 @@
 									">
 								2x Office Laptop, 1x Metal Rack
 							</p>
-							<button class="btn-pill btn-yellow" style="padding: 10px; font-size: 13px">
+							<button class="btn-pill btn-yellow" style="padding: 10px; font-size: 13px" onclick="showScreen('screen-backroom')">
 								<i class="fas fa-dolly"></i> Transfer to Backroom
 							</button>
 						</div>
@@ -3105,7 +3067,7 @@
 			</div>
 
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-backroom">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div style="margin: 10px 0 25px 0; flex-shrink: 0">
@@ -3229,56 +3191,218 @@
 							</div>
 						</div>
 
-						<button class="btn-primary" style="
-									margin-top: auto;
-									background: #1a1c21;
-									color: white;
-									border: 1px solid rgba(255, 255, 255, 0.05);
-									box-shadow: none;
-								">
-							<i class="fas fa-warehouse"></i> Expand Backroom (Lv.2)
-						</button>
+							<button class="btn-pill btn-blue" style="margin-top: auto; flex-shrink: 0;" onclick="showScreen('screen-storage-upgrades')">
+								<i class="fas fa-arrow-up"></i> Storage Upgrades
+							</button>
+							<button class="btn-primary" style="
+										margin-top: 10px;
+										background: #1a1c21;
+										color: white;
+										border: 1px solid rgba(255, 255, 255, 0.05);
+										box-shadow: none;
+									" onclick="showScreen('screen-coldroom')">
+								<i class="fas fa-snowflake"></i> Access Coldroom
+							</button>
 					</div>
 				</div>
 				<div class="screen-label">Backroom Storage</div>
 			</div>
 
+			<!-- Screen 16: Storage Upgrades -->
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-storage-upgrades">
 					<div class="notch"></div>
 					<div class="screen-content">
-						<div style="
-									display: flex;
-									justify-content: space-between;
-									align-items: center;
-									margin: 10px 0 25px 0;
-									flex-shrink: 0;
-								">
-							<div style="
-										display: flex;
-										align-items: center;
-										gap: 10px;
-									">
-								<i class="fas fa-arrow-left" style="
-											color: white;
-											cursor: pointer;
-										"></i>
-								<div>
-									<h1 class="heading-xl" style="font-size: 24px; margin: 0">
-										Shop Floor
-									</h1>
-									<p class="sub-text">
-										Manage Display Racks
-									</p>
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-backroom')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Storage Upgrades</h2>
+						</div>
+
+						<div class="soft-card" style="flex-direction: column; align-items: stretch; gap: 10px; border-color: rgba(51, 161, 255, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(51, 161, 255, 0.1); color: var(--accent-blue);">📦</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Expand Warehouse</h4>
+										<p style="margin: 0; font-size: 10px; color: var(--accent-blue);">Current: Level 1</p>
+									</div>
+								</div>
+								<button class="btn-small" style="background: var(--accent-blue); color: white; border: none;">₹ 15,000</button>
+							</div>
+							<p style="margin: 0; font-size: 11px; color: var(--text-muted);">Unlocks 2 new rack slots and increases total capacity by 500 units.</p>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 10px; border-color: rgba(74, 222, 128, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(74, 222, 128, 0.1); color: #4ade80;">❄️</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Cold Storage License</h4>
+										<p style="margin: 0; font-size: 10px; color: #4ade80;">Required for Dairy/Meats</p>
+									</div>
+								</div>
+								<button class="btn-small" style="background: #4ade80; color: white; border: none;">₹ 25,000</button>
+							</div>
+							<p style="margin: 0; font-size: 11px; color: var(--text-muted);">Unlocks the Coldroom area for storing temperature-sensitive goods.</p>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 10px;">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box">🏗️</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">High-Density Racks</h4>
+										<p style="margin: 0; font-size: 10px; color: var(--text-muted);">Upgrade all Racks</p>
+									</div>
+								</div>
+								<button class="btn-small">₹ 8,000</button>
+							</div>
+							<p style="margin: 0; font-size: 11px; color: var(--text-muted);">Increases individual rack capacity by 25% across the entire backroom.</p>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Storage Upgrades</div>
+			</div>
+
+			<!-- Coldroom Screen -->
+			<div>
+				<div class="iphone-frame" id="screen-coldroom">
+					<div class="notch"></div>
+					<div class="screen-content" style="background: linear-gradient(180deg, #0c4a6e 0%, var(--bg-deep) 100%);">
+						<div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<div style="display: flex; align-items: center; gap: 10px;">
+								<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-backroom')"></i>
+								<h1 class="heading-xl" style="margin: 0; font-size: 24px">Coldroom</h1>
+							</div>
+							<div class="status-badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; font-size: 10px; padding: 4px 8px; border-radius: 20px;">
+								<i class="fas fa-thermometer-half"></i> -4°C
+							</div>
+						</div>
+
+						<div class="soft-card" style="flex-direction: column; align-items: stretch; gap: 15px; padding: 20px; border-color: rgba(56, 189, 248, 0.3);">
+							<div style="font-size: 14px; color: white; display: flex; justify-content: space-between;">
+								<span style="font-weight: bold;">Industrial Fridge #1</span>
+								<span style="font-weight: bold;">80 / 120 Units</span>
+							</div>
+							<div class="stock-bar-bg" style="height: 6px; background: rgba(56, 189, 248, 0.1);">
+								<div class="stock-bar-fill" style="width: 66%; background: #38bdf8; box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);"></div>
+							</div>
+
+							<div style="display: flex; flex-direction: column; gap: 8px;">
+								<div class="product-item" style="margin-bottom: 0; border: none; background: rgba(0,0,0,0.2);">
+									<div class="product-icon">🍦</div>
+									<div class="product-details">
+										<h4 class="product-name">Ice Cream</h4>
+										<p class="product-stock">Available: <span style="color: white">30 units</span></p>
+									</div>
+								</div>
+								<div class="product-item" style="margin-bottom: 0; border: none; background: rgba(0,0,0,0.2);">
+									<div class="product-icon">🥩</div>
+									<div class="product-details">
+										<h4 class="product-name">Frozen Meat</h4>
+										<p class="product-stock">Available: <span style="color: white">50 units</span></p>
+									</div>
 								</div>
 							</div>
-							<button class="btn-icon" style="
-										background: rgba(255, 210, 51, 0.1);
-										color: var(--accent-yellow);
-									">
-								<i class="fas fa-plus"></i>
-							</button>
 						</div>
+
+						<button class="btn-pill btn-blue" style="margin-top: 15px; background: rgba(56, 189, 248, 0.1); border-color: #38bdf8; color: #38bdf8;" onclick="showScreen('screen-coldroom-upgrades')">
+							<i class="fas fa-arrow-up"></i> Coldroom Upgrades
+						</button>
+					</div>
+				</div>
+				<div class="screen-label">Cold Storage</div>
+			</div>
+
+			<!-- Coldroom Upgrades Screen -->
+			<div>
+				<div class="iphone-frame" id="screen-coldroom-upgrades">
+					<div class="notch"></div>
+					<div class="screen-content" style="background: linear-gradient(180deg, #0c4a6e 0%, var(--bg-deep) 100%);">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-coldroom')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Coldroom Upgrades</h2>
+						</div>
+
+						<div class="soft-card" style="flex-direction: column; align-items: stretch; gap: 12px; border-color: rgba(56, 189, 248, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8;"><i class="fas fa-fan"></i></div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Next-Gen Compressor</h4>
+										<p style="margin: 0; font-size: 10px; color: #38bdf8;">Save 30% Electricity</p>
+									</div>
+								</div>
+								<button class="btn-small">₹ 4,500</button>
+							</div>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 12px; border-color: rgba(56, 189, 248, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8;"><i class="fas fa-columns"></i></div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Double Door Fridge</h4>
+										<p style="margin: 0; font-size: 10px; color: #38bdf8;">+100 Unit Capacity</p>
+									</div>
+								</div>
+								<button class="btn-small">₹ 9,000</button>
+							</div>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 12px; border-color: rgba(56, 189, 248, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8;"><i class="fas fa-battery-full"></i></div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Backup Generator</h4>
+										<p style="margin: 0; font-size: 10px; color: #38bdf8;">Prevents Spoilage</p>
+									</div>
+								</div>
+								<button class="btn-small">₹ 12,000</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Coldroom Upgrades</div>
+			</div>
+
+			<div>
+					<div class="iphone-frame" id="screen-manage-racks">
+						<div class="notch"></div>
+						<div class="screen-content">
+							<div style="
+										display: flex;
+										justify-content: space-between;
+										align-items: center;
+										margin: 10px 0 25px 0;
+										flex-shrink: 0;
+									">
+								<div style="
+											display: flex;
+											align-items: center;
+											gap: 10px;
+										">
+									<i class="fas fa-arrow-left" style="
+												color: white;
+												cursor: pointer;
+											" onclick="showScreen('screen-dashboard')"></i>
+									<div>
+										<h1 class="heading-xl" style="font-size: 24px; margin: 0">
+											Shop Floor
+										</h1>
+										<p class="sub-text">
+											Manage Display Racks
+										</p>
+									</div>
+								</div>
+								<button class="btn-icon" style="
+											background: rgba(255, 210, 51, 0.1);
+											color: var(--accent-yellow);
+										" onclick="showScreen('screen-buy-rack')">
+									<i class="fas fa-plus"></i>
+								</button>
+							</div>
 						<div class="soft-card"
 							style="flex-direction: column; align-items: stretch; gap: 15px; border-color: rgba(255, 210, 51, 0.2);">
 							<div style="display: flex; justify-content: space-between; align-items: center;">
@@ -3325,7 +3449,7 @@
 								</div>
 							</div>
 
-							<button class="btn-small" style="margin-top: 0">
+							<button class="btn-small" style="margin-top: 0" onclick="showScreen('screen-refill-rack')">
 								<i class="fas fa-sync-alt"></i> Refill from Backroom
 							</button>
 						</div>
@@ -3421,6 +3545,102 @@
 				</div>
 				<div class="screen-label">Manage Racks</div>
 			</div>
+
+			<!-- Screen 18: Refill Rack -->
+			<div>
+				<div class="iphone-frame" id="screen-refill-rack">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-manage-racks')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Refill Rack</h2>
+						</div>
+
+						<p class="sub-text" style="margin-bottom: 20px;">Select stock from Backroom to refill the rack.</p>
+
+						<div class="soft-card" style="padding: 15px;">
+							<div class="product-icon">🥛</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Premium Milk</h4>
+								<p style="margin: 0; color: #4ade80; font-size: 10px;">In Backroom: 150 units</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; background: var(--accent-blue); color: white;">Refill</button>
+						</div>
+
+						<div class="soft-card" style="padding: 15px;">
+							<div class="product-icon">🍞</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Wheat Bread</h4>
+								<p style="margin: 0; color: #4ade80; font-size: 10px;">In Backroom: 80 units</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; background: var(--accent-blue); color: white;">Refill</button>
+						</div>
+
+						<div class="soft-card" style="padding: 15px;">
+							<div class="product-icon">🥚</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Farm Eggs</h4>
+								<p style="margin: 0; color: #4ade80; font-size: 10px;">In Backroom: 45 units</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; background: var(--accent-blue); color: white;">Refill</button>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Refill Rack</div>
+			</div>
+
+			<!-- Screen 19: Buy New Rack -->
+			<div>
+				<div class="iphone-frame" id="screen-buy-rack">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-manage-racks')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Furniture Shop</h2>
+						</div>
+
+						<div class="soft-card" style="flex-direction: column; align-items: stretch; gap: 10px; border-color: rgba(255, 210, 51, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(255, 210, 51, 0.1); color: var(--accent-yellow);">🗄️</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Small Metal Rack</h4>
+										<p style="margin: 0; font-size: 10px; color: var(--accent-yellow);">Capacity: 50 Units</p>
+									</div>
+								</div>
+								<button class="btn-small" style="background: var(--accent-yellow); color: black; border: none; width: auto; padding: 6px 15px; margin: 0;">₹ 5,000</button>
+							</div>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 10px; border-color: rgba(139, 92, 246, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple);">🕋</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Large Island Shelf</h4>
+										<p style="margin: 0; font-size: 10px; color: var(--accent-purple);">Capacity: 150 Units</p>
+									</div>
+								</div>
+								<button class="btn-small" style="background: var(--accent-purple); color: white; border: none; width: auto; padding: 6px 15px; margin: 0;">₹ 12,000</button>
+							</div>
+						</div>
+
+						<div class="soft-card" style="margin-top: 15px; flex-direction: column; align-items: stretch; gap: 10px; border-color: rgba(56, 189, 248, 0.3);">
+							<div style="display: flex; justify-content: space-between; align-items: center;">
+								<div style="display: flex; align-items: center; gap: 12px;">
+									<div class="icon-box" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8;">❄️</div>
+									<div>
+										<h4 style="margin: 0; color: white; font-size: 14px;">Freezer Display</h4>
+										<p style="margin: 0; font-size: 10px; color: #38bdf8;">Req. Cold License</p>
+									</div>
+								</div>
+								<button class="btn-small" style="background: #38bdf8; color: white; border: none; width: auto; padding: 6px 15px; margin: 0;">₹ 18,000</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Manage Racks</div>
+			</div>
 		</div>
 	</div>
 
@@ -3430,7 +3650,7 @@
 		</h2>
 		<div class="screens-row">
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-live-shop">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div
@@ -3441,8 +3661,9 @@
 								<p style="color: var(--text-muted); font-size: 12px; margin: 0;">Retail Tycoon
 									Simulation Active</p>
 							</div>
-							<button class="btn-icon" style="background: rgba(248, 113, 113, 0.1); color: #F87171;"><i
-									class="fas fa-stop"></i></button>
+							<button class="btn-icon" style="background: rgba(248, 113, 113, 0.1); color: #F87171;" onclick="showScreen('screen-dashboard')">
+								<i class="fas fa-stop"></i>
+							</button>
 						</div>
 
 						<div class="grid-2" style="margin-top: 0; margin-bottom: 15px;">
@@ -3477,12 +3698,12 @@
 			</div>
 
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-billing">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div
 							style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
-							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;"></i>
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;" onclick="showScreen('screen-live-shop')"></i>
 							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Billing Counter</h2>
 						</div>
 
@@ -3542,13 +3763,64 @@
 				<div class="screen-label">Billing Counter</div>
 			</div>
 
+			<!-- Screen 22: Staff & Upgrades -->
 			<div>
-				<div class="iphone-frame">
+				<div class="iphone-frame" id="screen-staff">
+					<div class="notch"></div>
+					<div class="screen-content">
+						<div style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer" onclick="showScreen('screen-dashboard')"></i>
+							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Team Management</h2>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; border-color: rgba(51, 161, 255, 0.3);">
+							<div class="icon-box" style="background: rgba(51, 161, 255, 0.1); color: var(--accent-blue);">👨‍💼</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Junior Cashier</h4>
+								<p style="margin: 0; color: var(--text-muted); font-size: 10px;">Cost: ₹ 12,000 / mo</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; border-color: var(--accent-blue); color: var(--accent-blue);">HIRE</button>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; border-color: rgba(139, 92, 246, 0.3);">
+							<div class="icon-box" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-purple);">📦</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Stock Boy</h4>
+								<p style="margin: 0; color: var(--text-muted); font-size: 10px;">Cost: ₹ 8,000 / mo</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; border-color: var(--accent-purple); color: var(--accent-purple);">HIRE</button>
+						</div>
+
+						<div class="soft-card" style="padding: 15px; border-color: rgba(74, 222, 128, 0.3);">
+							<div class="icon-box" style="background: rgba(74, 222, 128, 0.1); color: #4ade80;">👔</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Floor Manager</h4>
+								<p style="margin: 0; color: var(--text-muted); font-size: 10px;">Cost: ₹ 25,000 / mo</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0; border-color: #4ade80; color: #4ade80;">HIRE</button>
+						</div>
+
+						<label class="input-label" style="margin-top: 20px; margin-bottom: 10px;">SKILL UPGRADES</label>
+						<div class="product-item">
+							<div class="product-icon">🎓</div>
+							<div style="flex-grow: 1;">
+								<h4 style="margin: 0; color: white; font-size: 13px;">Service Training</h4>
+								<p style="margin: 0; color: var(--text-muted); font-size: 10px;">+15% Tips</p>
+							</div>
+							<button class="btn-small" style="width: auto; padding: 6px 12px; margin: 0;">₹ 3,500</button>
+						</div>
+					</div>
+				</div>
+				<div class="screen-label">Team Management</div>
+			</div>
+
+			<div>
+				<div class="iphone-frame" id="screen-insights">
 					<div class="notch"></div>
 					<div class="screen-content">
 						<div
 							style="display: flex; align-items: center; gap: 15px; margin: 10px 0 25px 0; flex-shrink: 0;">
-							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;"></i>
+							<i class="fas fa-arrow-left" style="color: white; cursor: pointer;" onclick="showScreen('screen-live-shop')"></i>
 							<h2 style="color: white; font-size: 20px; margin: 0; font-weight: 600;">Customer Insights
 							</h2>
 						</div>
@@ -3603,6 +3875,172 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		// --- APP DATA ---
+		const products = {
+			freshco: [
+				{ id: "g_01", name: "Premium Milk", buy: 40, sell: 55, icon: "🥛", moq: 50, desc: "Fresh organic milk from local farms. A daily essential." },
+				{ id: "g_02", name: "Wheat Bread", buy: 25, sell: 35, icon: "🍞", moq: 50, desc: "Whole grain bread, baked daily. High turnover staple." },
+				{ id: "g_05", name: "Farm Eggs", buy: 50, sell: 70, icon: "🥚", moq: 30, desc: "Grade A large eggs. Heart of any breakfast catalog." }
+			],
+			techdist: [
+				{ id: "e_20", name: "Office Laptop", buy: 40000, sell: 55000, icon: "💻", moq: 2, desc: "Work-ready laptops for digital professionals." },
+				{ id: "e_08", name: "BT Speaker", buy: 900, sell: 1500, icon: "🔊", moq: 10, desc: "Portable sound solution with great profit margins." },
+				{ id: "e_15", name: "Wireless Buds", buy: 3000, sell: 4500, icon: "🎧", moq: 5, desc: "Trendy audio gear with active noise cancellation." }
+			],
+			infrabuild: [
+				{ id: "i_01", name: "Metal Rack", buy: 5000, sell: 7500, icon: "🗄️", moq: 1, desc: "Heavy-duty storage solution for your shop floor." },
+				{ id: "i_02", name: "Shopping Cart", buy: 3000, sell: 4500, icon: "🛒", moq: 10, desc: "Durable carts to help customers carry more items." },
+				{ id: "i_03", name: "POS Counter", buy: 15000, sell: 22000, icon: "🧾", moq: 1, desc: "Advanced terminal for faster customer checkout." }
+			]
+		};
+
+		let cart = [];
+
+		// --- NAVIGATION ---
+		function showScreen(screenId) {
+			const screen = document.getElementById(screenId);
+			if (screen) {
+				screen.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+			}
+		}
+
+		// --- CATALOG RENDERING ---
+		function renderCatalogs() {
+			Object.keys(products).forEach(supplier => {
+				const grid = document.getElementById(`${supplier}-grid`);
+				if (!grid) return;
+				
+				grid.innerHTML = '';
+				products[supplier].forEach(p => {
+					const card = document.createElement('div');
+					card.className = 'market-card';
+					card.style.borderColor = getSupplierColor(supplier, 0.2);
+					card.innerHTML = `
+						<div class="market-icon">${p.icon}</div>
+						<h4 style="margin: 0; color: white; font-size: 13px;">${p.name}</h4>
+						<p style="margin: 3px 0 0; color: var(--text-muted); font-size: 11px;">MOQ: ${p.moq} units</p>
+						<h3 style="margin: 5px 0 0; color: white; font-size: 14px;">₹ ${p.buy.toLocaleString()} <span style="font-size: 10px; color: var(--text-muted);">/unit</span></h3>
+						<button class="btn-small" style="color: ${getSupplierColor(supplier)}; border-color: ${getSupplierColor(supplier)};" onclick="viewDetails('${supplier}', '${p.id}')">
+							Details & Add
+						</button>
+					`;
+					grid.appendChild(card);
+				});
+			});
+		}
+
+		function getSupplierColor(supplier, alpha = 1) {
+			if (supplier === 'freshco') return `rgba(51, 161, 255, ${alpha})`;
+			if (supplier === 'techdist') return `rgba(139, 92, 246, ${alpha})`;
+			if (supplier === 'infrabuild') return `rgba(255, 210, 51, ${alpha})`;
+			return `rgba(255, 255, 255, ${alpha})`;
+		}
+
+		// --- DETAILS & CART ---
+		function viewDetails(supplier, productId) {
+			const p = products[supplier].find(item => item.id === productId);
+			const prefix = supplier;
+			
+			const iconEl = document.getElementById(`${prefix}-p-icon`);
+			const nameEl = document.getElementById(`${prefix}-p-name`);
+			const buyEl = document.getElementById(`${prefix}-p-buy`);
+			const sellEl = document.getElementById(`${prefix}-p-sell`);
+			const marginEl = document.getElementById(`${prefix}-p-margin`);
+			const moqEl = document.getElementById(`${prefix}-p-moq`);
+			const descEl = document.getElementById(`${prefix}-p-desc`);
+			const addBtn = document.getElementById(`${prefix}-add-btn`);
+
+			if(iconEl) iconEl.innerText = p.icon;
+			if(nameEl) nameEl.innerText = p.name;
+			if(buyEl) buyEl.innerText = `₹ ${p.buy.toLocaleString()} / unit`;
+			if(sellEl) sellEl.innerText = `₹ ${p.sell.toLocaleString()} / unit`;
+			
+			const margin = p.sell - p.buy;
+			const marginPct = Math.round((margin / p.buy) * 100);
+			if(marginEl) marginEl.innerText = `₹ ${margin.toLocaleString()} (${marginPct}%)`;
+			if(moqEl) moqEl.innerText = `Minimum Order Quantity: ${p.moq} units`;
+			if(descEl) descEl.innerText = p.desc;
+			
+			if(addBtn) {
+				const total = p.buy * p.moq;
+				addBtn.innerHTML = `<i class="fas fa-shopping-cart"></i> Add Minimum Order (₹ ${total.toLocaleString()})`;
+				addBtn.onclick = () => addToCart(supplier, p.id);
+			}
+			
+			showScreen(`screen-${supplier}-details`);
+		}
+
+		function addToCart(supplier, productId) {
+			const p = products[supplier].find(item => item.id === productId);
+			const existing = cart.find(item => item.id === p.id);
+			
+			if (existing) {
+				existing.qty += p.moq;
+			} else {
+				cart.push({ ...p, qty: p.moq, supplier });
+			}
+			
+			alert(`${p.name} added to cart!`);
+			updateCartUI(supplier);
+			showScreen(`screen-${supplier}-cart`);
+		}
+
+		function updateCartUI(supplier) {
+			const list = document.getElementById(`${supplier}-cart-list`);
+			if (!list) return;
+			
+			const supplierCart = cart.filter(item => item.supplier === supplier);
+			list.innerHTML = '';
+			
+			let subtotal = 0;
+			supplierCart.forEach(item => {
+				const itemTotal = item.buy * item.qty;
+				subtotal += itemTotal;
+				
+				const div = document.createElement('div');
+				div.className = 'product-item';
+				div.style.borderColor = getSupplierColor(supplier, 0.2);
+				div.innerHTML = `
+					<div class="product-icon" style="color: ${getSupplierColor(supplier)}">${item.icon}</div>
+					<div class="product-details">
+						<h4 class="product-name" style="font-size: 13px">${item.name}</h4>
+						<p style="color: ${getSupplierColor(supplier)}; font-size: 12px; font-weight: 600; margin: 0;">₹ ${item.buy.toLocaleString()} <span style="font-size: 10px; color: var(--text-muted);">/unit</span></p>
+					</div>
+					<div class="cart-qty-control">
+						<span class="qty-text">${item.qty}</span>
+					</div>
+				`;
+				list.appendChild(div);
+			});
+			
+			// Update Subtotal and Total on Cart screen
+			const subtotalEl = document.getElementById(`${supplier}-subtotal`);
+			const totalEl = document.getElementById(`${supplier}-total`);
+			if(subtotalEl) subtotalEl.innerText = `₹ ${subtotal.toLocaleString()}`;
+			if(totalEl) totalEl.innerText = `₹ ${subtotal.toLocaleString()}`;
+			
+			// Update Payment screen amount
+			const payAmountEl = document.getElementById(`${supplier}-pay-amount`);
+			const finalPayBtn = document.getElementById(`${supplier}-final-pay`);
+			if(payAmountEl) payAmountEl.innerText = `₹ ${subtotal.toLocaleString()}`;
+			if(finalPayBtn) finalPayBtn.innerText = `Pay ₹ ${subtotal.toLocaleString()}`;
+		}
+
+		// --- INITIALIZE ---
+		window.onload = () => {
+			renderCatalogs();
+			
+			// Auto-link Terminal Icons
+			const terminalIcons = document.querySelectorAll('.app-icon');
+			if(terminalIcons.length >= 3) {
+				terminalIcons[0].onclick = () => showScreen('screen-freshco-catalog');
+				terminalIcons[1].onclick = () => showScreen('screen-techdist-catalog');
+				terminalIcons[2].onclick = () => showScreen('screen-infrabuild-catalog');
+			}
+		};
+	</script>
 </body>
+
 
 </html>
