@@ -1,0 +1,904 @@
+{
+  "achievements": [
+    {
+      "id": "wealth_01",
+      "category": "wealth",
+      "title": "First 10K",
+      "description": "Earn a total lifetime revenue of ₹10,000.",
+      "targetValue": 10000,
+      "rewardXP": 500,
+      "rewardMoney": 1000,
+      "icon": "🪙"
+    },
+    {
+      "id": "wealth_02",
+      "category": "wealth",
+      "title": "Wealth Milestone: 25k",
+      "description": "Earn a total lifetime revenue of ₹25,000.",
+      "targetValue": 25000,
+      "rewardXP": 1250,
+      "rewardMoney": 2500,
+      "icon": "💵"
+    },
+    {
+      "id": "wealth_03",
+      "category": "wealth",
+      "title": "Wealth Milestone: 50k",
+      "description": "Earn a total lifetime revenue of ₹50,000.",
+      "targetValue": 50000,
+      "rewardXP": 2500,
+      "rewardMoney": 5000,
+      "icon": "💸"
+    },
+    {
+      "id": "wealth_04",
+      "category": "wealth",
+      "title": "Wealth Milestone: 100k",
+      "description": "Earn a total lifetime revenue of ₹100,000.",
+      "targetValue": 100000,
+      "rewardXP": 2000,
+      "rewardMoney": 5000,
+      "icon": "💰"
+    },
+    {
+      "id": "wealth_05",
+      "category": "wealth",
+      "title": "Wealth Milestone: 250k",
+      "description": "Earn a total lifetime revenue of ₹250,000.",
+      "targetValue": 250000,
+      "rewardXP": 5000,
+      "rewardMoney": 12500,
+      "icon": "💹"
+    },
+    {
+      "id": "wealth_06",
+      "category": "wealth",
+      "title": "Wealth Milestone: 500k",
+      "description": "Earn a total lifetime revenue of ₹500,000.",
+      "targetValue": 500000,
+      "rewardXP": 10000,
+      "rewardMoney": 25000,
+      "icon": "🏦"
+    },
+    {
+      "id": "wealth_07",
+      "category": "wealth",
+      "title": "The First Million",
+      "description": "Earn a total lifetime revenue of ₹1,000,000.",
+      "targetValue": 1000000,
+      "rewardXP": 20000,
+      "rewardMoney": 50000,
+      "icon": "🏆"
+    },
+    {
+      "id": "wealth_08",
+      "category": "wealth",
+      "title": "Wealth Milestone: 2.5M",
+      "description": "Earn a total lifetime revenue of ₹2,500,000.",
+      "targetValue": 2500000,
+      "rewardXP": 50000,
+      "rewardMoney": 125000,
+      "icon": "💎"
+    },
+    {
+      "id": "wealth_09",
+      "category": "wealth",
+      "title": "Wealth Milestone: 5.0M",
+      "description": "Earn a total lifetime revenue of ₹5,000,000.",
+      "targetValue": 5000000,
+      "rewardXP": 100000,
+      "rewardMoney": 250000,
+      "icon": "👑"
+    },
+    {
+      "id": "wealth_10",
+      "category": "wealth",
+      "title": "Wealth Milestone: 10.0M",
+      "description": "Earn a total lifetime revenue of ₹10,000,000.",
+      "targetValue": 10000000,
+      "rewardXP": 200000,
+      "rewardMoney": 500000,
+      "icon": "🌌"
+    },
+    {
+      "id": "wealth_11",
+      "category": "wealth",
+      "title": "Wealth Milestone: 25.0M",
+      "description": "Earn a total lifetime revenue of ₹25,000,000.",
+      "targetValue": 25000000,
+      "rewardXP": 500000,
+      "rewardMoney": 1250000,
+      "icon": "🏛️"
+    },
+    {
+      "id": "wealth_12",
+      "category": "wealth",
+      "title": "Wealth Milestone: 50.0M",
+      "description": "Earn a total lifetime revenue of ₹50,000,000.",
+      "targetValue": 50000000,
+      "rewardXP": 1000000,
+      "rewardMoney": 2500000,
+      "icon": "🏰"
+    },
+    {
+      "id": "wealth_13",
+      "category": "wealth",
+      "title": "Wealth Milestone: 100.0M",
+      "description": "Earn a total lifetime revenue of ₹100,000,000.",
+      "targetValue": 100000000,
+      "rewardXP": 2000000,
+      "rewardMoney": 5000000,
+      "icon": "🌍"
+    },
+    {
+      "id": "wealth_14",
+      "category": "wealth",
+      "title": "Wealth Milestone: 250.0M",
+      "description": "Earn a total lifetime revenue of ₹250,000,000.",
+      "targetValue": 250000000,
+      "rewardXP": 5000000,
+      "rewardMoney": 12500000,
+      "icon": "☀️"
+    },
+    {
+      "id": "wealth_15",
+      "category": "wealth",
+      "title": "Wealth Milestone: 500.0M",
+      "description": "Earn a total lifetime revenue of ₹500,000,000.",
+      "targetValue": 500000000,
+      "rewardXP": 10000000,
+      "rewardMoney": 25000000,
+      "icon": "🌟"
+    },
+    {
+      "id": "wealth_16",
+      "category": "wealth",
+      "title": "The Billionaire Club",
+      "description": "Earn a total lifetime revenue of ₹1,000,000,000.",
+      "targetValue": 1000000000,
+      "rewardXP": 20000000,
+      "rewardMoney": 50000000,
+      "icon": "🔥"
+    },
+    {
+      "id": "spend_01",
+      "category": "spending",
+      "title": "Big Spender: 1k",
+      "description": "Spend a total of ₹1,000 at wholesale suppliers.",
+      "targetValue": 1000,
+      "rewardXP": 100,
+      "rewardMoney": 0,
+      "icon": "🛍️"
+    },
+    {
+      "id": "spend_02",
+      "category": "spending",
+      "title": "Big Spender: 5k",
+      "description": "Spend a total of ₹5,000 at wholesale suppliers.",
+      "targetValue": 5000,
+      "rewardXP": 500,
+      "rewardMoney": 0,
+      "icon": "🛒"
+    },
+    {
+      "id": "spend_03",
+      "category": "spending",
+      "title": "Big Spender: 10k",
+      "description": "Spend a total of ₹10,000 at wholesale suppliers.",
+      "targetValue": 10000,
+      "rewardXP": 1000,
+      "rewardMoney": 0,
+      "icon": "🏷️"
+    },
+    {
+      "id": "spend_04",
+      "category": "spending",
+      "title": "Big Spender: 25k",
+      "description": "Spend a total of ₹25,000 at wholesale suppliers.",
+      "targetValue": 25000,
+      "rewardXP": 2500,
+      "rewardMoney": 0,
+      "icon": "💳"
+    },
+    {
+      "id": "spend_05",
+      "category": "spending",
+      "title": "Big Spender: 50k",
+      "description": "Spend a total of ₹50,000 at wholesale suppliers.",
+      "targetValue": 50000,
+      "rewardXP": 5000,
+      "rewardMoney": 0,
+      "icon": "📦"
+    },
+    {
+      "id": "spend_06",
+      "category": "spending",
+      "title": "Big Spender: 100k",
+      "description": "Spend a total of ₹100,000 at wholesale suppliers.",
+      "targetValue": 100000,
+      "rewardXP": 10000,
+      "rewardMoney": 0,
+      "icon": "🚛"
+    },
+    {
+      "id": "spend_07",
+      "category": "spending",
+      "title": "Big Spender: 250k",
+      "description": "Spend a total of ₹250,000 at wholesale suppliers.",
+      "targetValue": 250000,
+      "rewardXP": 25000,
+      "rewardMoney": 0,
+      "icon": "🏢"
+    },
+    {
+      "id": "spend_08",
+      "category": "spending",
+      "title": "Big Spender: 500k",
+      "description": "Spend a total of ₹500,000 at wholesale suppliers.",
+      "targetValue": 500000,
+      "rewardXP": 50000,
+      "rewardMoney": 0,
+      "icon": "🏢"
+    },
+    {
+      "id": "spend_09",
+      "category": "spending",
+      "title": "Big Spender: 1.0M",
+      "description": "Spend a total of ₹1,000,000 at wholesale suppliers.",
+      "targetValue": 1000000,
+      "rewardXP": 100000,
+      "rewardMoney": 0,
+      "icon": "🏭"
+    },
+    {
+      "id": "spend_10",
+      "category": "spending",
+      "title": "Big Spender: 2.5M",
+      "description": "Spend a total of ₹2,500,000 at wholesale suppliers.",
+      "targetValue": 2500000,
+      "rewardXP": 250000,
+      "rewardMoney": 0,
+      "icon": "🏙️"
+    },
+    {
+      "id": "spend_11",
+      "category": "spending",
+      "title": "Big Spender: 5.0M",
+      "description": "Spend a total of ₹5,000,000 at wholesale suppliers.",
+      "targetValue": 5000000,
+      "rewardXP": 500000,
+      "rewardMoney": 0,
+      "icon": "🌍"
+    },
+    {
+      "id": "spend_12",
+      "category": "spending",
+      "title": "Big Spender: 10.0M",
+      "description": "Spend a total of ₹10,000,000 at wholesale suppliers.",
+      "targetValue": 10000000,
+      "rewardXP": 1000000,
+      "rewardMoney": 0,
+      "icon": "👑"
+    },
+    {
+      "id": "prog_01",
+      "category": "progression",
+      "title": "Moving Up",
+      "description": "Reach Level 5.",
+      "targetValue": 5,
+      "rewardXP": 0,
+      "rewardMoney": 2000,
+      "icon": "📈"
+    },
+    {
+      "id": "prog_02",
+      "category": "progression",
+      "title": "Store Expansion",
+      "description": "Reach Level 7 and unlock the Backroom.",
+      "targetValue": 7,
+      "rewardXP": 500,
+      "rewardMoney": 5000,
+      "icon": "📦"
+    },
+    {
+      "id": "prog_03",
+      "category": "progression",
+      "title": "Professional Retailer",
+      "description": "Reach Level 10 and unlock the Cold Room.",
+      "targetValue": 10,
+      "rewardXP": 1000,
+      "rewardMoney": 10000,
+      "icon": "❄️"
+    },
+    {
+      "id": "prog_04",
+      "category": "progression",
+      "title": "Rising Star",
+      "description": "Reach Level 20.",
+      "targetValue": 20,
+      "rewardXP": 0,
+      "rewardMoney": 25000,
+      "icon": "🌠"
+    },
+    {
+      "id": "prog_05",
+      "category": "progression",
+      "title": "Established Manager",
+      "description": "Reach Level 30 and unlock Staff: Cashier.",
+      "targetValue": 30,
+      "rewardXP": 5000,
+      "rewardMoney": 50000,
+      "icon": "👨‍💼"
+    },
+    {
+      "id": "prog_06",
+      "category": "progression",
+      "title": "Industry Veteran",
+      "description": "Reach Level 40.",
+      "targetValue": 40,
+      "rewardXP": 0,
+      "rewardMoney": 100000,
+      "icon": "🎖️"
+    },
+    {
+      "id": "prog_07",
+      "category": "progression",
+      "title": "Automation Master",
+      "description": "Reach Level 50 and unlock Staff: Stock Boy.",
+      "targetValue": 50,
+      "rewardXP": 15000,
+      "rewardMoney": 200000,
+      "icon": "🏃‍♂️"
+    },
+    {
+      "id": "prog_08",
+      "category": "progression",
+      "title": "Retail Icon",
+      "description": "Reach Level 75.",
+      "targetValue": 75,
+      "rewardXP": 0,
+      "rewardMoney": 500000,
+      "icon": "🌟"
+    },
+    {
+      "id": "prog_09",
+      "category": "progression",
+      "title": "Global Leader",
+      "description": "Reach Level 90.",
+      "targetValue": 90,
+      "rewardXP": 0,
+      "rewardMoney": 1000000,
+      "icon": "🌎"
+    },
+    {
+      "id": "prog_10",
+      "category": "progression",
+      "title": "Market Tycoon",
+      "description": "Reach Level 100 and master the retail world.",
+      "targetValue": 100,
+      "rewardXP": 0,
+      "rewardMoney": 5000000,
+      "icon": "👑"
+    },
+    {
+      "id": "sales_all_01",
+      "category": "sales",
+      "title": "Item Seller: 10",
+      "description": "Sell 10 items total to customers.",
+      "targetValue": 10,
+      "rewardXP": 50,
+      "rewardMoney": 100,
+      "icon": "🛒"
+    },
+    {
+      "id": "sales_all_02",
+      "category": "sales",
+      "title": "Item Seller: 50",
+      "description": "Sell 50 items total to customers.",
+      "targetValue": 50,
+      "rewardXP": 250,
+      "rewardMoney": 500,
+      "icon": "🛒"
+    },
+    {
+      "id": "sales_all_03",
+      "category": "sales",
+      "title": "Item Seller: 100",
+      "description": "Sell 100 items total to customers.",
+      "targetValue": 100,
+      "rewardXP": 500,
+      "rewardMoney": 1000,
+      "icon": "🛒"
+    },
+    {
+      "id": "sales_all_04",
+      "category": "sales",
+      "title": "Item Seller: 250",
+      "description": "Sell 250 items total to customers.",
+      "targetValue": 250,
+      "rewardXP": 1250,
+      "rewardMoney": 2500,
+      "icon": "🛒"
+    },
+    {
+      "id": "sales_all_05",
+      "category": "sales",
+      "title": "Item Seller: 500",
+      "description": "Sell 500 items total to customers.",
+      "targetValue": 500,
+      "rewardXP": 2500,
+      "rewardMoney": 5000,
+      "icon": "🛒"
+    },
+    {
+      "id": "sales_all_06",
+      "category": "sales",
+      "title": "Item Seller: 1k",
+      "description": "Sell 1,000 items total to customers.",
+      "targetValue": 1000,
+      "rewardXP": 5000,
+      "rewardMoney": 10000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_all_07",
+      "category": "sales",
+      "title": "Item Seller: 2.5k",
+      "description": "Sell 2,500 items total to customers.",
+      "targetValue": 2500,
+      "rewardXP": 12500,
+      "rewardMoney": 25000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_all_08",
+      "category": "sales",
+      "title": "Item Seller: 5k",
+      "description": "Sell 5,000 items total to customers.",
+      "targetValue": 5000,
+      "rewardXP": 25000,
+      "rewardMoney": 50000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_all_09",
+      "category": "sales",
+      "title": "Item Seller: 10k",
+      "description": "Sell 10,000 items total to customers.",
+      "targetValue": 10000,
+      "rewardXP": 50000,
+      "rewardMoney": 100000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_all_10",
+      "category": "sales",
+      "title": "Item Seller: 50k",
+      "description": "Sell 50,000 items total to customers.",
+      "targetValue": 50000,
+      "rewardXP": 250000,
+      "rewardMoney": 500000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_all_11",
+      "category": "sales",
+      "title": "Item Seller: 100k",
+      "description": "Sell 100,000 items total to customers.",
+      "targetValue": 100000,
+      "rewardXP": 500000,
+      "rewardMoney": 1000000,
+      "icon": "📦"
+    },
+    {
+      "id": "sales_groc_01",
+      "category": "sales",
+      "title": "Grocery Expert: 10",
+      "description": "Sell 10 grocery items total.",
+      "targetValue": 10,
+      "rewardXP": 60,
+      "rewardMoney": 120,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_02",
+      "category": "sales",
+      "title": "Grocery Expert: 50",
+      "description": "Sell 50 grocery items total.",
+      "targetValue": 50,
+      "rewardXP": 300,
+      "rewardMoney": 600,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_03",
+      "category": "sales",
+      "title": "Grocery Expert: 100",
+      "description": "Sell 100 grocery items total.",
+      "targetValue": 100,
+      "rewardXP": 600,
+      "rewardMoney": 1200,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_04",
+      "category": "sales",
+      "title": "Grocery Expert: 250",
+      "description": "Sell 250 grocery items total.",
+      "targetValue": 250,
+      "rewardXP": 1500,
+      "rewardMoney": 3000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_05",
+      "category": "sales",
+      "title": "Grocery Expert: 500",
+      "description": "Sell 500 grocery items total.",
+      "targetValue": 500,
+      "rewardXP": 3000,
+      "rewardMoney": 6000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_06",
+      "category": "sales",
+      "title": "Grocery Expert: 1k",
+      "description": "Sell 1,000 grocery items total.",
+      "targetValue": 1000,
+      "rewardXP": 6000,
+      "rewardMoney": 12000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_07",
+      "category": "sales",
+      "title": "Grocery Expert: 2.5k",
+      "description": "Sell 2,500 grocery items total.",
+      "targetValue": 2500,
+      "rewardXP": 15000,
+      "rewardMoney": 30000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_08",
+      "category": "sales",
+      "title": "Grocery Expert: 5k",
+      "description": "Sell 5,000 grocery items total.",
+      "targetValue": 5000,
+      "rewardXP": 30000,
+      "rewardMoney": 60000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_groc_09",
+      "category": "sales",
+      "title": "Grocery Expert: 10k",
+      "description": "Sell 10,000 grocery items total.",
+      "targetValue": 10000,
+      "rewardXP": 60000,
+      "rewardMoney": 120000,
+      "icon": "🍎"
+    },
+    {
+      "id": "sales_elec_01",
+      "category": "sales",
+      "title": "Tech Guru: 10",
+      "description": "Sell 10 electronic items total.",
+      "targetValue": 10,
+      "rewardXP": 100,
+      "rewardMoney": 200,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_02",
+      "category": "sales",
+      "title": "Tech Guru: 50",
+      "description": "Sell 50 electronic items total.",
+      "targetValue": 50,
+      "rewardXP": 500,
+      "rewardMoney": 1000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_03",
+      "category": "sales",
+      "title": "Tech Guru: 100",
+      "description": "Sell 100 electronic items total.",
+      "targetValue": 100,
+      "rewardXP": 1000,
+      "rewardMoney": 2000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_04",
+      "category": "sales",
+      "title": "Tech Guru: 250",
+      "description": "Sell 250 electronic items total.",
+      "targetValue": 250,
+      "rewardXP": 2500,
+      "rewardMoney": 5000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_05",
+      "category": "sales",
+      "title": "Tech Guru: 500",
+      "description": "Sell 500 electronic items total.",
+      "targetValue": 500,
+      "rewardXP": 5000,
+      "rewardMoney": 10000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_06",
+      "category": "sales",
+      "title": "Tech Guru: 1k",
+      "description": "Sell 1,000 electronic items total.",
+      "targetValue": 1000,
+      "rewardXP": 10000,
+      "rewardMoney": 20000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_07",
+      "category": "sales",
+      "title": "Tech Guru: 2.5k",
+      "description": "Sell 2,500 electronic items total.",
+      "targetValue": 2500,
+      "rewardXP": 25000,
+      "rewardMoney": 50000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_08",
+      "category": "sales",
+      "title": "Tech Guru: 5k",
+      "description": "Sell 5,000 electronic items total.",
+      "targetValue": 5000,
+      "rewardXP": 50000,
+      "rewardMoney": 100000,
+      "icon": "💻"
+    },
+    {
+      "id": "sales_elec_09",
+      "category": "sales",
+      "title": "Tech Guru: 10k",
+      "description": "Sell 10,000 electronic items total.",
+      "targetValue": 10000,
+      "rewardXP": 100000,
+      "rewardMoney": 200000,
+      "icon": "💻"
+    },
+    {
+      "id": "special_01",
+      "category": "sales",
+      "title": "Sold Out!",
+      "description": "Have a display rack completely empty out while open.",
+      "targetValue": 1,
+      "rewardXP": 500,
+      "rewardMoney": 1000,
+      "icon": "🪹"
+    },
+    {
+      "id": "special_02",
+      "category": "sales",
+      "title": "High Margin",
+      "description": "Sell a single item worth over ₹50,000.",
+      "targetValue": 1,
+      "rewardXP": 5000,
+      "rewardMoney": 10000,
+      "icon": "📱"
+    },
+    {
+      "id": "special_03",
+      "category": "sales",
+      "title": "Variety Master",
+      "description": "Have 50 unique items on display at once.",
+      "targetValue": 50,
+      "rewardXP": 25000,
+      "rewardMoney": 50000,
+      "icon": "🌈"
+    },
+    {
+      "id": "cust_01",
+      "category": "customers",
+      "title": "First Impression",
+      "description": "Serve 100 customers.",
+      "targetValue": 100,
+      "rewardXP": 200,
+      "rewardMoney": 1000,
+      "icon": "👋"
+    },
+    {
+      "id": "cust_02",
+      "category": "customers",
+      "title": "Local Favorite",
+      "description": "Serve 1,000 customers.",
+      "targetValue": 1000,
+      "rewardXP": 2000,
+      "rewardMoney": 10000,
+      "icon": "🏙️"
+    },
+    {
+      "id": "cust_03",
+      "category": "customers",
+      "title": "City Hub",
+      "description": "Serve 10,000 customers.",
+      "targetValue": 10000,
+      "rewardXP": 20000,
+      "rewardMoney": 100000,
+      "icon": "🌆"
+    },
+    {
+      "id": "cust_04",
+      "category": "customers",
+      "title": "People's Choice",
+      "description": "Serve 50,000 customers.",
+      "targetValue": 50000,
+      "rewardXP": 100000,
+      "rewardMoney": 500000,
+      "icon": "🌍"
+    },
+    {
+      "id": "cust_05",
+      "category": "customers",
+      "title": "Stellar Service",
+      "description": "Reach a store reputation of 4.5+ stars.",
+      "targetValue": 4.5,
+      "rewardXP": 5000,
+      "rewardMoney": 10000,
+      "icon": "⭐"
+    },
+    {
+      "id": "cust_06",
+      "category": "customers",
+      "title": "Perfect Reputation",
+      "description": "Reach a store reputation of 5.0 stars.",
+      "targetValue": 5.0,
+      "rewardXP": 20000,
+      "rewardMoney": 50000,
+      "icon": "🌟"
+    },
+    {
+      "id": "cust_07",
+      "category": "customers",
+      "title": "Fast Lane",
+      "description": "Clear a customer from the queue in under 1.5 seconds.",
+      "targetValue": 1,
+      "rewardXP": 500,
+      "rewardMoney": 1000,
+      "icon": "⚡"
+    },
+    {
+      "id": "cust_08",
+      "category": "customers",
+      "title": "Clear Aisles",
+      "description": "Serve 50 customers without a single walkout.",
+      "targetValue": 50,
+      "rewardXP": 2500,
+      "rewardMoney": 5000,
+      "icon": "✨"
+    },
+    {
+      "id": "cust_09",
+      "category": "customers",
+      "title": "Long Queue",
+      "description": "Have 10 people in the checkout line at once.",
+      "targetValue": 10,
+      "rewardXP": 500,
+      "rewardMoney": 0,
+      "icon": "⏳"
+    },
+    {
+      "id": "cust_10",
+      "category": "customers",
+      "title": "Happy Crowd",
+      "description": "Have 30 customers inside the store simultaneously.",
+      "targetValue": 30,
+      "rewardXP": 7500,
+      "rewardMoney": 15000,
+      "icon": "🔥"
+    },
+    {
+      "id": "log_01",
+      "category": "logistics",
+      "title": "Help Arrival",
+      "description": "Hire your first cashier to help at checkout.",
+      "targetValue": 1,
+      "rewardXP": 2000,
+      "rewardMoney": 0,
+      "icon": "👨‍💼"
+    },
+    {
+      "id": "log_02",
+      "category": "logistics",
+      "title": "Running Smooth",
+      "description": "Hire your first stock boy to automate restocking.",
+      "targetValue": 1,
+      "rewardXP": 5000,
+      "rewardMoney": 0,
+      "icon": "🏃‍♂️"
+    },
+    {
+      "id": "log_03",
+      "category": "logistics",
+      "title": "Full Team",
+      "description": "Have 5 staff members actively working.",
+      "targetValue": 5,
+      "rewardXP": 15000,
+      "rewardMoney": 25000,
+      "icon": "👥"
+    },
+    {
+      "id": "log_04",
+      "category": "logistics",
+      "title": "Backroom Pro",
+      "description": "Upgrade your backroom storage capacity to maximum.",
+      "targetValue": 1,
+      "rewardXP": 10000,
+      "rewardMoney": 0,
+      "icon": "🏢"
+    },
+    {
+      "id": "log_05",
+      "category": "logistics",
+      "title": "Cold Chain",
+      "description": "Install your first Walk-in Cold Room unit.",
+      "targetValue": 1,
+      "rewardXP": 5000,
+      "rewardMoney": 10000,
+      "icon": "🥶"
+    },
+    {
+      "id": "log_06",
+      "category": "logistics",
+      "title": "Heavy Duty",
+      "description": "Install 20 industrial display racks.",
+      "targetValue": 20,
+      "rewardXP": 7500,
+      "rewardMoney": 15000,
+      "icon": "🗄️"
+    },
+    {
+      "id": "log_07",
+      "category": "logistics",
+      "title": "Marketing Maven",
+      "description": "Run 10 different store marketing campaigns.",
+      "targetValue": 10,
+      "rewardXP": 8000,
+      "rewardMoney": 0,
+      "icon": "📣"
+    },
+    {
+      "id": "log_08",
+      "category": "logistics",
+      "title": "Supplier VIP",
+      "description": "Complete 100 wholesale orders across all suppliers.",
+      "targetValue": 100,
+      "rewardXP": 15000,
+      "rewardMoney": 30000,
+      "icon": "🤝"
+    },
+    {
+      "id": "log_09",
+      "category": "logistics",
+      "title": "Modern Checkout",
+      "description": "Upgrade to the AI-Powered Fast Checkout System.",
+      "targetValue": 1,
+      "rewardXP": 50000,
+      "rewardMoney": 100000,
+      "icon": "🧠"
+    },
+    {
+      "id": "log_10",
+      "category": "logistics",
+      "title": "Retail Legend",
+      "description": "Reach Level 100 and earn ₹100M total revenue.",
+      "targetValue": 1,
+      "rewardXP": 1000000,
+      "rewardMoney": 10000000,
+      "icon": "👑"
+    }
+  ]
+}
